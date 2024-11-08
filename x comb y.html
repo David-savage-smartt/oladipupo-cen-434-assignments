@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type = "text/javascript">
+        function factorial(n){
+            if (n<0){
+                return "please gimme a positive number"
+            }
+            if (n==0|| n==1){
+                return "factorial is one"
+            }
+            let x= 1
+            for (let i= 2; i<=n; i++){
+                x *= i
+            }
+        return x
+        }
+        
+        function combination(x,y){
+            if (x>y){
+                return factorial(x) / (factorial(x) * factorial(x-y))
+            }
+            if (y>x){
+                return factorial(y) / (factorial(y) * factorial(y-x))
+            }
+            if (x==y){
+                return factorial(x+1) / (factorial(x+1) * factorial(x+1-y))
+            }
+        }
+
+        console.log(combination(5,2))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
